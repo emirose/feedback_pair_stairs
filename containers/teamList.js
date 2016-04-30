@@ -1,8 +1,8 @@
-import TeamMatrix from '../teamMatrix';
+import TeamMatrix from '../components/teamMatrix';
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state) => {
-  return { teamMembers: state.people } 
+  return { teamMembers: state.teamMembers } 
 }
 
 const TeamList = connect(mapStateToProps)(TeamMatrix);

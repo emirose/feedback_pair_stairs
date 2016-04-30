@@ -1,8 +1,7 @@
 {
-  "name": "pair_stairs",
+  "name": "feedback_pair_stairs",
   "version": "1.0.0",
-  "description": "sample react/redux app for keeping track of pair rotation",
-  "main": "index.js",
+  "description": "sample react/redux app for keeping track of feedback pairs",
   "scripts": {
     "watch": "webpack --progress --colors --watch",
     "test": "node_modules/bin/mocha"
@@ -13,13 +12,11 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "babel-preset-react": "^6.5.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "webpack": "^1.13.0"
-  },
-  "dependencies": {
+    "webpack": "^1.13.0",
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-react-jsx": "^6.7.5",

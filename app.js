@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
-import AddPerson from './addPerson.js';
+import AddTeamMember from './components/addTeamMember.js';
 import TeamList from './containers/teamList.js';
 import reducers from './reducers.js';
 
@@ -12,8 +12,8 @@ let store = createStore(reducers);
 let AppComponent = React.createClass({
 
   render: ()=> {
-   return <div> Hello
-    <AddPerson/>
+   return <div> Team Feedback Matrix
+    <AddTeamMember/>
     <TeamList/>
     </div>
   }

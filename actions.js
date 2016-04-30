@@ -1,5 +1,5 @@
-export const ADD_PERSON = 'ADD_PERSON';
+export const ADD_TEAM_MEMBER = 'ADD_TEAM_MEMBER';
 
-export function addPerson(name) {
-  return { type: ADD_PERSON, name: name}
+export function addTeamMember(name) {
+  return { type: ADD_TEAM_MEMBER, name: name}
 }

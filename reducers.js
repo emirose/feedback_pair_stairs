@@ -1,13 +1,13 @@
-import {ADD_PERSON} from "./actions.js";
+import {ADD_TEAM_MEMBER} from "./actions.js";
 
-let initialState = {people: [] };
+let initialState = {teamMembers: [] };
 
 const reducers =  (state=initialState, action) => {
   switch (action.type) {
-    case ADD_PERSON:
+    case ADD_TEAM_MEMBER:
       return Object.assign({}, state, {
-        people: [
-          ...state.people,
+        teamMembers: [
+          ...state.teamMembers,
           action.name
         ]
      })
