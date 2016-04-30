@@ -7,8 +7,10 @@ let AddTeamMember = ({dispatch}) => {
 
   let onSubmit = (event) => {
     event.preventDefault();
-    dispatch(addTeamMember(teamMemberInput.value));
-    teamMemberInput.value = '';
+    if(teamMemberInput.value !== '') {
+      dispatch(addTeamMember(teamMemberInput.value));
+      teamMemberInput.value = '';
+    }
   };
 
   return <form onSubmit = {onSubmit}>
