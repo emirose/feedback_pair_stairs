@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "webpack --progress --colors --watch",
     "test": "node_modules/bin/mocha",
-    "serve": "webpack-dev-server"
+    "start": "node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
