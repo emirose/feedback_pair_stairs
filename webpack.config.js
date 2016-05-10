@@ -16,5 +16,8 @@ module.exports = {
         loaders: ["style", "css", "sass"]}
     ]
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  watchOptions: {
+    poll: true
+  }
 };
