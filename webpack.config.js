@@ -10,7 +10,10 @@ module.exports = {
       { test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-        query: {presets: ['react', 'es2015']}}
+        query: {presets: ['react', 'es2015']}},
+      { test: /\.scss$/,
+        exclude: /node_modules/,
+        loaders: ["style", "css", "sass"]}
     ]
   },
   devtool: 'source-map'
