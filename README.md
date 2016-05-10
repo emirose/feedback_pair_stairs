@@ -14,6 +14,16 @@ npm run watch
 
 open index.html in browser 
 
+## To run the app locally from Docker:
+
+docker-compose up
+
+then visit
+
+```
+http://{docker-machine ip my-docker-machine-name}:8080
+```
+
 ## Todo:
 * Add tests
 * Display feedback matrix
