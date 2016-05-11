@@ -1,5 +1,5 @@
 import React from 'react';
-import {addTeamMember}  from '../actions.js'; 
+import {addTeamMember, addTeamMemberAsync}  from '../actions.js';
 import {connect} from 'react-redux';
 
 let AddTeamMember = ({dispatch}) => {
@@ -13,9 +13,15 @@ let AddTeamMember = ({dispatch}) => {
     }
   };
 
+  let onButtonClick = () => {
+    dispatch(addTeamMemberAsync(teamMemberInput.value));
+  }
+
   return <form onSubmit = {onSubmit}>
     <input ref={node => { teamMemberInput = node }}/>
-    <input value="add team member" type='submit'/></form>
+    <input value="add team member" type='submit'/>
+    <input value="add team member async" type="button" onClick = {onButtonClick}/>
+    </form>
 };
 
 AddTeamMember = connect()(AddTeamMember);
