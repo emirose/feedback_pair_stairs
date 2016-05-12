@@ -1,17 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import TeamMember from './teamMember';
+import {appendToName} from '../actions.js'
 
-let teamMatrix = ({teamMembers}) => {
-
-    let teamMemberBoxStyles = {
-      border: '1px solid black',
-      padding: '10px'
-    };
-
+let teamMatrix = ({teamMembers, appendToName}) => {
     return (
       <div> Team Members
         <div> {teamMembers.map((teamMember) => {
-           return <div style={teamMemberBoxStyles} key={teamMember}> {teamMember} </div>
+           return <TeamMember name={teamMember} key={teamMember} onClickBaby={appendToName} />
           }
         )}
         </div>
@@ -23,4 +19,13 @@ const mapStateToProps = (state) => {
   return { teamMembers: state.teamMembers }
 }
 
-export default connect(mapStateToProps)(teamMatrix);
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    appendToName: (teamMember) => {
+      dispatch(appendToName(teamMember))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(teamMatrix);

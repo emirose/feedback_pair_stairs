@@ -1,15 +1,17 @@
-import {ADD_TEAM_MEMBER} from "./actions.js";
+import {combineReducers} from "redux";
+import {ADD_TEAM_MEMBER, APPEND_TO_NAME} from "./actions.js";
 
-let initialState = {teamMembers: [] };
-
-const reducers =  (state=initialState, action) => {
+const teamMembers = (state = [], action) => {
   switch (action.type) {
     case ADD_TEAM_MEMBER:
-       return Object.assign({}, state, {
-        teamMembers: addTeamMemberIfNotAlreadyPresent(action.name, state.teamMembers)
-     })
+      return addTeamMemberIfNotAlreadyPresent(action.name, state);
+    case APPEND_TO_NAME:
+      let newState = state.map(oldName => {
+        return oldName == action.name ? oldName + ' wazzup' : oldName;
+      })
+      return newState;
     default:
-      return state
+      return state;
   }
 }
 
@@ -19,4 +21,4 @@ let addTeamMemberIfNotAlreadyPresent =  (name, teamMembers) => {
   }
   return [...teamMembers, name]
 }
-export default reducers;
+export default combineReducers({teamMembers});
