@@ -4,7 +4,7 @@
   "description": "sample react/redux app for keeping track of feedback pairs",
   "scripts": {
     "watch": "webpack --progress --colors --watch",
-    "test": "mocha --compilers js:babel-core/register components/__tests__/**/*.spec.js",
+    "test": "mocha --compilers js:babel-core/register components/__tests__/**/*.spec.js --require mochaDom.js",
     "start": "node_modules/.bin/webpack-dev-server --host 0.0.0.0 --port 8080 --inline --hot"
   },
   "repository": {
@@ -22,12 +22,14 @@
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "enzyme": "^2.3.0",
+    "jsdom": "^9.1.0",
     "mocha": "^2.4.5",
     "node-sass": "^3.6.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-redux": "^4.4.5",
     "redux": "^3.4.0",
+    "redux-mock-store": "^1.0.2",
     "redux-thunk": "^2.0.1",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",

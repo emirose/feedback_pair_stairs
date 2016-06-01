@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import TeamMember from './teamMember';
 import {appendToName} from '../actions.js'
 
-let teamMatrix = ({teamMembers, appendToName}) => {
+export const teamMatrix = ({teamMembers, appendToName}) => {
     return (
       <div> Team Members
         <div> {teamMembers.map((teamMember) => {
